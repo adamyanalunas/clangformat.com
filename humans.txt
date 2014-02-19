@@ -1,0 +1,14 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+Senior Beard Wearer: Adam Yanalunas
+Director of slapping fingers on keyboard: Adam Yanalunas
+Chief Technical Outsider: Adam Yanalunas
+Twitter: @adamyanalunas
+
+# THANKS
+Anybody who has ever written anything useful about clang-format.
+
+# TECHNOLOGY COLOPHON
+THE INTERNETS
