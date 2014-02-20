@@ -10,11 +10,6 @@ textarea {
     color: #222;
 }
 
-body {
-/*    font-size: 1em;
-    line-height: 1.4;*/
-}
-
 ::-moz-selection {
     background: #ADC5D9;
     text-shadow: none;
@@ -69,7 +64,8 @@ a.entry {
     display: block;
 }
 
-a.entry:hover {
+a.entry:hover,
+a.selected {
     color: #fff;
     background: #23232d;
     text-decoration: none;
@@ -77,6 +73,13 @@ a.entry:hover {
 
 .description {
     display: none;
+}
+
+.guide {
+    left: 51%;
+    position: fixed;
+    top: 7.1em;
+    width: 48%;
 }
 
 .nowrap {
