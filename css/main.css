@@ -104,8 +104,16 @@ a.selected {
     background: none;
     border: none;
     color: #dadada;
-    padding: 0;
     line-height: 26px;
+    padding: 0;
+}
+
+.preview input.bool {
+    width: 72px;
+}
+
+.preview input[type="number"] {
+    width: 54px;
 }
 
 
