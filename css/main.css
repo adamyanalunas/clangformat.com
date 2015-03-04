@@ -61,8 +61,7 @@ body {
 
 a.entry {
     color: #dadada;
-    display: block;
-    margin: 4px 0;
+    /*margin: 4px 0;*/
 }
 
 a.entry:hover,
@@ -70,6 +69,7 @@ a.selected {
     color: #fff;
     background: #23232d;
     text-decoration: none;
+    text-shadow: 0 0 5px rgba(255, 255, 255, .4);
 }
 
 .description {
@@ -90,11 +90,14 @@ a.selected {
 .preview {
     background: #16161d; /* Eigengrau */
     font: 1.5em/1.8em monaco, consolas, "Lucida Console", monospace;
-    /*height: 100%;*/
-    /*margin: 8px;*/
+    margin-bottom: 15px;
     padding: 4px 8px;
-    /*position: absolute;*/
-    /*width: 100%;*/
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.preview p {
+    margin: 4px 0;
 }
 
 

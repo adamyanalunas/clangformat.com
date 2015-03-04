@@ -82,7 +82,7 @@
 		if (type === 'BUTTON') {
 			e.preventDefault();
 
-			el.classList.add('btn-primary');
+			// el.classList.add('btn-primary');
 			var parentId = el.dataset.target.substring(0, el.dataset.target.indexOf('_'));
 			showExample(parentId, el.dataset.target);
 		}
@@ -148,9 +148,9 @@
 		var buttons = document.querySelectorAll('#' + parent + ' button');
 		for(var i=0, len=buttons.length; i<len; i++) {
 			if (buttons[i].dataset.target !== id) {
-				buttons[i].classList.remove('btn-primary');
+				// buttons[i].classList.remove('btn-primary');
 			} else {
-				buttons[i].classList.add('btn-primary');
+				// buttons[i].classList.add('btn-primary');
 				setPropertyValue(parent, buttons[i].innerText);
 				userSettings[parent] = buttons[i].textContent;
 			}
