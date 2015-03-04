@@ -58,10 +58,13 @@
 		e.preventDefault();
 
 		var el;
+		// Stupid way to find associated description element
 		if (e.target.hash) {
 			el = e.target;
 		} else if (e.target.parentNode.hash) {
 			el = e.target.parentNode;
+		} else if (e.target.parentNode.parentNode.hash) {
+			el = e.target.parentNode.parentNode;
 		}
 
 		if (!el) return;
@@ -169,7 +172,7 @@
 	var setPropertyValue = function(prop, val) {
 		var property = document.querySelector('.preview a[href="#' + prop + '"] .value');
 		if (property) {
-			property.innerHTML = val;
+			property.value = val;
 		}
 	}
 })(document);
