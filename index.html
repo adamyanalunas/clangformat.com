@@ -380,6 +380,119 @@ void someFunction() {
 								<li>BS_Allman (in configuration: Allman) Always break before braces.</li>
 								<li>BS_GNU (in configuration: GNU) Always break before braces and add an extra level of indentation to braces of control statements, not to those of class, function or other definitions.</li>
 							</ul>
+
+							<h3>Example</h3>
+							<div class="example">
+								<div class="setting">
+									<button type="button" class="btn btn-default" data-target="BreakBeforeBraces_Attach" data-toggle="code">Attach</button>
+									<button type="button" class="btn btn-default" data-target="BreakBeforeBraces_Linux" data-toggle="code">Linux</button>
+									<button type="button" class="btn btn-default" data-target="BreakBeforeBraces_Stroustrup" data-toggle="code">Stroustrup</button>
+									<button type="button" class="btn btn-default" data-target="BreakBeforeBraces_Allman" data-toggle="code">Allman</button>
+									<button type="button" class="btn btn-default" data-target="BreakBeforeBraces_GNU" data-toggle="code">GNU</button>
+								</div>
+
+								<div class="code-content">
+									<div id="BreakBeforeBraces_Attach" class="code-pane">
+<pre><code>class Widget {
+	int val;
+
+	Widget (int foo) {
+		if (foo == 0) {
+			val = 0;
+		} else if(foo > 0) {
+			val = -1;
+		} else {
+			val = -2;
+		}
+	}
+};</code></pre>
+									</div>
+
+									<div id="BreakBeforeBraces_Linux" class="code-pane">
+<pre><code>class Widget
+{
+	int val;
+
+	Widget (int foo)
+	{
+		if (foo == 0) {
+			val = 0;
+		} else if (foo > 0) {
+			val = -1;
+		} else {
+			val = -2;
+		}
+	}
+};</code></pre>
+									</div>
+
+									<div id="BreakBeforeBraces_Stroustrup" class="code-pane">
+<pre><code>class Widget {
+	int val;
+
+	Widget (int foo)
+	{
+		if (foo == 0) {
+			val = 0;
+		}
+		else if (foo > 0) {
+			val = -1;
+		}
+		else {
+			val = -2;
+		}
+	}
+};</code></pre>
+									</div>
+
+									<div id="BreakBeforeBraces_Allman" class="code-pane">
+<pre><code>class Widget
+{
+	int val;
+
+	Widget (int foo)
+	{
+		if (foo == 0)
+		{
+			val = 0;
+		}
+		else if (foo > 0)
+		{
+			val = -1;
+		}
+		else
+		{
+			val = -2;
+		}
+	}
+};</code></pre>
+									</div>
+
+									<div id="BreakBeforeBraces_GNU" class="code-pane">
+<pre><code>class Widget
+{
+	int val;
+
+	Widget (int foo)
+	{
+		if (foo == 0)
+			{
+				val = 0;
+			}
+		else if (foo > 0)
+			{
+				val = -1;
+			}
+		else
+			{
+				val = -2;
+			}
+	}
+};</code></pre>
+									</div>
+
+								</div>
+							</div>							
 						</div>
 
 						<div id="BreakBeforeTernaryOperators" class="description">
