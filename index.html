@@ -87,6 +87,72 @@
 						<div id="AccessModifierOffset" class="description">
 							<h3>AccessModifierOffset (<code>int</code>)</h3>
 							<p>The extra indent or outdent of access modifiers, e.g. public:.</p>
+							
+							<h3>Example</h3>
+							<div class="example">
+								<div class="setting">
+									<button type="button" class="btn btn-default" data-target="AccessModifierOffset_Minus2" data-toggle="code">-2</button>
+									<button type="button" class="btn btn-default" data-target="AccessModifierOffset_Zero" data-toggle="code">0</button>
+									<button type="button" class="btn btn-default" data-target="AccessModifierOffset_Plus2" data-toggle="code">2</button>
+								</div>
+
+								<div class="code-content">
+									<div id="AccessModifierOffset_Minus2" class="code-pane">
+<pre><code>class Widget {
+private:
+  int val;
+
+public:
+  Widget(int foo) {
+    if (foo == 0) {
+      val = 0;
+    } else if (foo > 0) {
+      val = -1;
+    } else {
+      val = -2;
+    }
+  }
+};</code></pre>
+									</div>
+
+									<div id="AccessModifierOffset_Plus2" class="code-pane">
+<pre><code>class Widget {
+    private:
+  int val;
+
+    public:
+  Widget(int foo) {
+    if (foo == 0) {
+      val = 0;
+    } else if (foo &gt; 0) {
+      val = -1;
+    } else {
+      val = -2;
+    }
+  }
+};</code></pre>
+									</div>
+
+									<div id="AccessModifierOffset_Zero" class="code-pane">
+<pre><code>class Widget {
+  private:
+  int val;
+
+  public:
+  Widget(int foo) {
+    if (foo == 0) {
+      val = 0;
+    } else if (foo &gt; 0) {
+      val = -1;
+    } else {
+      val = -2;
+    }
+  }
+};</code></pre>
+									</div>
+
+								</div>
+							</div>
 						</div>
 
 						<div id="AlignEscapedNewlinesLeft" class="description">
