@@ -365,6 +365,31 @@ void someFunction() {
 						<div id="BinPackParameters" class="description">
 							<h3>BinPackParameters (<code>bool</code>)</h3>
 							<p>If <code>false</code>, a function call&rsquo;s or function definition&rsquo;s parameters will either all be on the same line or will have one line each.</p>
+
+							<h3>Example</h3>
+							<div class="example">
+								<div class="setting">
+									<button type="button" class="btn btn-default" data-target="BinPackParameters_true" data-toggle="code">true</button>
+									<button type="button" class="btn btn-default" data-target="BinPackParameters_false" data-toggle="code">false</button>
+								</div>
+
+								<div class="code-content">
+									<div id="BinPackParameters_true" class="code-pane">
+<pre><code>int locatePairInLookupTable(std::string const &key, int const searchOffset,
+                            int const modifier) {
+  // Do stuff
+}</code></pre>
+									</div>
+
+									<div id="BinPackParameters_false" class="code-pane">
+<pre><code>int locatePairInLookupTable(std::string const &key,
+                            int const searchOffset,
+                            int const modifier) {
+  // Do stuff
+}</code></pre>
+									</div>
+								</div>
+							</div>
 						</div>
 
 						<div id="BreakBeforeBinaryOperators" class="description">
