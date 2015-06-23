@@ -87,6 +87,72 @@
 						<div id="AccessModifierOffset" class="description">
 							<h3>AccessModifierOffset (<code>int</code>)</h3>
 							<p>The extra indent or outdent of access modifiers, e.g. public:.</p>
+							
+							<h3>Example</h3>
+							<div class="example">
+								<div class="setting">
+									<button type="button" class="btn btn-default" data-target="AccessModifierOffset_Minus2" data-toggle="code">-2</button>
+									<button type="button" class="btn btn-default" data-target="AccessModifierOffset_Zero" data-toggle="code">0</button>
+									<button type="button" class="btn btn-default" data-target="AccessModifierOffset_Plus2" data-toggle="code">2</button>
+								</div>
+
+								<div class="code-content">
+									<div id="AccessModifierOffset_Minus2" class="code-pane">
+<pre><code>class Widget {
+private:
+  int val;
+
+public:
+  Widget(int foo) {
+    if (foo == 0) {
+      val = 0;
+    } else if (foo > 0) {
+      val = -1;
+    } else {
+      val = -2;
+    }
+  }
+};</code></pre>
+									</div>
+
+									<div id="AccessModifierOffset_Plus2" class="code-pane">
+<pre><code>class Widget {
+    private:
+  int val;
+
+    public:
+  Widget(int foo) {
+    if (foo == 0) {
+      val = 0;
+    } else if (foo &gt; 0) {
+      val = -1;
+    } else {
+      val = -2;
+    }
+  }
+};</code></pre>
+									</div>
+
+									<div id="AccessModifierOffset_Zero" class="code-pane">
+<pre><code>class Widget {
+  private:
+  int val;
+
+  public:
+  Widget(int foo) {
+    if (foo == 0) {
+      val = 0;
+    } else if (foo &gt; 0) {
+      val = -1;
+    } else {
+      val = -2;
+    }
+  }
+};</code></pre>
+									</div>
+
+								</div>
+							</div>
 						</div>
 
 						<div id="AlignEscapedNewlinesLeft" class="description">
@@ -299,6 +365,31 @@ void someFunction() {
 						<div id="BinPackParameters" class="description">
 							<h3>BinPackParameters (<code>bool</code>)</h3>
 							<p>If <code>false</code>, a function call&rsquo;s or function definition&rsquo;s parameters will either all be on the same line or will have one line each.</p>
+
+							<h3>Example</h3>
+							<div class="example">
+								<div class="setting">
+									<button type="button" class="btn btn-default" data-target="BinPackParameters_true" data-toggle="code">true</button>
+									<button type="button" class="btn btn-default" data-target="BinPackParameters_false" data-toggle="code">false</button>
+								</div>
+
+								<div class="code-content">
+									<div id="BinPackParameters_true" class="code-pane">
+<pre><code>int locatePairInLookupTable(std::string const &key, int const searchOffset,
+                            int const modifier) {
+  // Do stuff
+}</code></pre>
+									</div>
+
+									<div id="BinPackParameters_false" class="code-pane">
+<pre><code>int locatePairInLookupTable(std::string const &key,
+                            int const searchOffset,
+                            int const modifier) {
+  // Do stuff
+}</code></pre>
+									</div>
+								</div>
+							</div>
 						</div>
 
 						<div id="BreakBeforeBinaryOperators" class="description">
@@ -380,6 +471,119 @@ void someFunction() {
 								<li>BS_Allman (in configuration: Allman) Always break before braces.</li>
 								<li>BS_GNU (in configuration: GNU) Always break before braces and add an extra level of indentation to braces of control statements, not to those of class, function or other definitions.</li>
 							</ul>
+
+							<h3>Example</h3>
+							<div class="example">
+								<div class="setting">
+									<button type="button" class="btn btn-default" data-target="BreakBeforeBraces_Attach" data-toggle="code">Attach</button>
+									<button type="button" class="btn btn-default" data-target="BreakBeforeBraces_Linux" data-toggle="code">Linux</button>
+									<button type="button" class="btn btn-default" data-target="BreakBeforeBraces_Stroustrup" data-toggle="code">Stroustrup</button>
+									<button type="button" class="btn btn-default" data-target="BreakBeforeBraces_Allman" data-toggle="code">Allman</button>
+									<button type="button" class="btn btn-default" data-target="BreakBeforeBraces_GNU" data-toggle="code">GNU</button>
+								</div>
+
+								<div class="code-content">
+									<div id="BreakBeforeBraces_Attach" class="code-pane">
+<pre><code>class Widget {
+	int val;
+
+	Widget (int foo) {
+		if (foo == 0) {
+			val = 0;
+		} else if(foo > 0) {
+			val = -1;
+		} else {
+			val = -2;
+		}
+	}
+};</code></pre>
+									</div>
+
+									<div id="BreakBeforeBraces_Linux" class="code-pane">
+<pre><code>class Widget
+{
+	int val;
+
+	Widget (int foo)
+	{
+		if (foo == 0) {
+			val = 0;
+		} else if (foo > 0) {
+			val = -1;
+		} else {
+			val = -2;
+		}
+	}
+};</code></pre>
+									</div>
+
+									<div id="BreakBeforeBraces_Stroustrup" class="code-pane">
+<pre><code>class Widget {
+	int val;
+
+	Widget (int foo)
+	{
+		if (foo == 0) {
+			val = 0;
+		}
+		else if (foo > 0) {
+			val = -1;
+		}
+		else {
+			val = -2;
+		}
+	}
+};</code></pre>
+									</div>
+
+									<div id="BreakBeforeBraces_Allman" class="code-pane">
+<pre><code>class Widget
+{
+	int val;
+
+	Widget (int foo)
+	{
+		if (foo == 0)
+		{
+			val = 0;
+		}
+		else if (foo > 0)
+		{
+			val = -1;
+		}
+		else
+		{
+			val = -2;
+		}
+	}
+};</code></pre>
+									</div>
+
+									<div id="BreakBeforeBraces_GNU" class="code-pane">
+<pre><code>class Widget
+{
+	int val;
+
+	Widget (int foo)
+	{
+		if (foo == 0)
+			{
+				val = 0;
+			}
+		else if (foo > 0)
+			{
+				val = -1;
+			}
+		else
+			{
+				val = -2;
+			}
+	}
+};</code></pre>
+									</div>
+
+								</div>
+							</div>							
 						</div>
 
 						<div id="BreakBeforeTernaryOperators" class="description">
